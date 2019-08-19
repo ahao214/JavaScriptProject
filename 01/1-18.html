@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--open和close方法-->
+		<script type="text/javascript">
+			function openWin(){
+				smallWindow= window.open("","","width=300, height=200");
+				smallWindow.document.write("<p>Hi again,old friend!<br/>Glad to see you today</p>")
+			}
+			function closeWin(){
+				smallWindow.close();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Open a small window" onclick="openWin()" />
+		<input type="button" value="Close the small window" onclick="closeWin()" />
+	</body>
+</html>

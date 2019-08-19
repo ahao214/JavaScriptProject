@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--含参数的函数-->
+		<script type="text/javascript">
+			function calculateTotal(purchaseAmt,taxRate){
+				tax = purchaseAmt * taxRate;
+				total = purchaseAmt + tax;
+				document.write("Your total is $" + total);
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p>Amount purchard is $100.00,Tax rate is 0.065</p>
+		<p>Click Button 1 to calculate the total,passing in 100.00,0.065</p>
+		<input type="button" value="Button 1" onclick="calculateTotal(100,0.065)" />
+		
+		<p>Click Button 1 to calculate the total,passing in 0.065,100.00</p>
+		<input type="button" value="Button 2" onclick="calculateTotal(0.065,100)" />
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--getElementById-->
+		<script type="text/javascript">
+			function getValue(){
+				var dog = document.getElementById("puppy");
+				document.write("Your dog is not a terrier <br/>");
+				document.write("It is a ");
+				document.write(dog.innerHTML);
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="puppy" onclick="getValue()">Poodle</h1>
+	</body>
+</html>
