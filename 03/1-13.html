@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function pageColor() {
+				var color = prompt("Enter a new background color:", "");
+				switch (color) {
+					case "green":
+						document.body.bgColor = "green";
+						break;
+					case "red":
+						document.body.bgColor = "red";
+						break;
+					case "blue":
+						document.body.bgColor = "blue";
+						break;
+					case "yellow":
+						document.body.bgColor = "yello";
+						break;
+					default:
+						document.write("Invalid entry")
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Change the page color</h1>
+		<p>Select from blue,green,yellow,or red</p>
+
+		<p><input type="button" id="color" value="Enter a color" onclick="pageColor()"></p>
+
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function paycheck(){
+				var rate = parseInt(prompt("What is the employee's pay rate?",  " "));
+				var hours = parseInt(prompt("How many hours did the employee work this week?"," "));
+				
+				if(hours>40 && rate <20){
+					var overtime= rate * 1.5 * (hours -40);
+					var regular = rate * 40;
+					var pay = overtime+ regular;
+				}else{
+					var pay = rate * hours;
+					document.write("<p>Your paycheck this week will be $"+pay+".</p>")
+				}
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Calculating the Paycheck</h1>
+		<h3>Click the button to calculate a paycheck with a compound condition</h3>
+		<p><input type="button" id="paycheck" value="calculate the paycheck"  onclick="paycheck()"></p>
+		
+	</body>
+</html>

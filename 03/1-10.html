@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function rateIT(){
+				var rate = parseInt(prompt("Rate teh site from 1 to 10, with 10 as the best"));
+				var grade ="";
+				if(rate==10){
+					grade="A";
+				}else if(rate>=7 && rate<=9){
+					grade="B"
+				}else if(rate >=4 && rate < 7){
+					grade="C"
+				}else{
+					grade="D"
+				}
+				
+				document.write("<p>You gave the site a rating of "+grade+".</p>")
+				
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Rate teh Site</h1>
+		<h3>Rate teh site from 1 t0 10,with 10 as the best ever and 1 as one of the worst</h3>
+		<p><input type="button" id="rating" value="Enter your rating now" onclick="rateIT()"></p>
+		
+	</body>
+</html>

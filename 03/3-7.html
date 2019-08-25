@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function shipCost(){
+				var price = parseInt(prompt("What is yoru merchandise total?",""));
+				if (price> 1.00 && price<25){
+					var ship = 5.00;
+				}
+				if(price > 25.00 && price < 50.00){
+					var ship =7.00;
+				}
+				
+				document.write("<p>Your shipping cost will be $"+ship+"</p>")
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Calculating Shipping Costs</h1>
+		<h3>Click the button to calculate your shippig cost</h3>
+		<p><input type="button" id="ship" value="calculate your shipping charge" onclick="shipCost()"></p>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getResult(){
+		
+					var x = parseInt(prompt("Enter x", " "));
+					var y = parseInt(prompt("Enter y", " "));
+					var add = prompt("Do you want to add the numbers(yes or no?)", " ");
+					if (add == "yes") {
+						var result = x + y;
+						document.write("<p>I added the numbers " + x + " and " + y + ".</p>");					
+						}
+						else {
+							var subtracty = prompt("Do you want to subtract x from y (yes or no)?", " ");
+							if (subtracty == "yes") {
+								var result = y - x;
+								document.write("<p>I subtracted " + x + " from " + y + ".</p>");
+								document.write("<p>The result is " + result + ".</p>")
+							}else{
+								result = x-y;
+								document.write("<p>I subtracted "+y+" from "+x+".</p>");
+								document.write("<p>The result is "+result+".</p>")
+							}
+						}
+				
+					
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Add x and y or Subtract</h1>
+		<h3>Click the button!</h3>
+		<p><input type="button" id="numbers" value="Enter your numbers" onclick="getResult()" /></p>
+
+	</body>
+</html>

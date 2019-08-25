@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getTemp() {
+				var temp = prompt("What's the temperature today?", "degress Fahrenheit");
+				if (temp < 32)
+					document.write("<p>It may snow today</p>")
+				document.write("Be sure to wear your boots and mittern.");
+
+			}
+		</script>
+	</head>
+	<body>
+		<h1>What's the Weather?</h1>
+		<h3>Click the button!</h3>
+		<p><input type="button" id="temperature" value="what is today's temperature?" onclick="getTemp();"></p>
+
+	</body>
+</html>

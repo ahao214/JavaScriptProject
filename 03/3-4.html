@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getScore() {
+				var basicScore = parseInt(prompt("What was teh student's initial score?", " "));
+
+				var extraQuestion = prompt("Did the student do Q.21(yes or no )");
+				if(extraQuestion == "yes"){
+					var points = parseInt(prompt("How many points did the student earn on Q.21?",""));								
+				}else{
+					var points = parseInt(prompt("How many points did the student earn for a study guide?",""));					
+				}
+				
+				var score = basicScore + points;
+				document.write("<p>The student's score,with any extra credit, is "+ score+"%. </p>")
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Student Score</h1>
+		<p><input type="button" id="score" value="Enter the exam score?" onclick="getScore()"></p>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function shapeShift() {
+				var area = 0;
+				var PI = 3.14159;
+				var shape = prompt("Select a shape by entering the corresponding letter", " ");
+				switch (shape) {
+					case "c":
+						var radius = parseInt(prompt("What is the radius of the circle?",
+							""));
+						area = PI * radius * radius;
+						document.write("<p>The area of a circle with radius " + radius + " is " + area + ".</p>");
+						break;
+
+					case "s":
+						var side = parseInt(prompt("What is the length of one side of the square?",
+							""));
+						area = side * side;
+						document.write("<p>The area of a square with a side of  " + side + " is " + area + ".</p>");
+						break;
+
+					case "t":
+						var base = parseInt(prompt("What is the length of the base of this triangle?",""));
+						var height = parseInt(prompt("What is the height of this triangle?",""));
+						area = 0.5 * base * height;
+						document.write("<p>The area of a triangle with a base of "+base+" and a height of "+height+" is "+area+".</p>")
+						break;
+					default:
+					document.write("Invalid entry");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Find teh area of a shape</h1>
+		<ul>
+			<li>For a circle, enter c</li>
+			<li>For a square, enter s</li>
+			<li>For a triangle,enter t</li>
+		</ul>
+		<p><input type="button" id="shape" value="Begin calculation" onclick="shapeShift()"></p>
+
+
+
+	</body>
+</html>
