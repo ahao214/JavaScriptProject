@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getStuff() {
+				document.write('<table width="40%" align="center">');
+				var num = 0;
+				var item = "";
+				document.write('<h1>&nbsp;</h1>');
+				while (num < 10) {
+					item = prompt("What do you choose for item number " + (num + 1) + "?");
+					document.write('<tr>');
+					document.write('<td>item' + (num + 1) + ':' + item + '</td>');
+					document.write('</tr>');
+					num = num + 1;
+				}
+				document.write('</table>');
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Select Your Gear for the Game</h1>
+					<p>You are allowed to pick up to 10 items from the following list before the game begins:</p>
+					<table width="60%">
+						<tr>
+							<td colspan="2">
+								<h3>Supplies Available</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								bag of food(1-day supply)
+							</td>
+							<td>
+								bottle of water(1-day supple)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								sword
+							</td>
+							<td>
+								shield
+							</td>
+						</tr>
+						<tr>
+							<td>keylar vest</td>
+							<td>hunting knife</td>
+						</tr>
+						<tr>
+							<td>
+								bow with quiver of arrows
+							</td>
+							<td>
+								10 extra arrows
+							</td>
+						</tr>
+						<tr>
+							<td>backpack</td>
+							<td>
+								slingshot
+							</td>
+						</tr>
+						<tr>
+							<td>
+								box of 5 firestarters
+							</td>
+							<td>
+								pet goat
+							</td>
+						</tr>
+						<tr>
+							<td>
+								falcon
+							</td>
+							<td>
+								falconer glovers
+							</td>
+						</tr>
+						<tr>
+							<td>
+								walking stick
+							</td>
+							<td>
+								hammer
+							</td>
+						</tr>
+						<tr>
+							<td>shovel</td>
+							<td>1-person tent</td>
+						</tr>
+					</table>
+			<tr>
+				<td>
+					<p>&nbsp;</p>
+					<p>
+						<input type="button" id="gear" value="click to enter your selections" onclick="getStuff()" />
+					</p>
+				</td>
+			</tr>
+
+
+			</td>
+			</tr>
+
+		</table>
+
+	</body>
+</html>

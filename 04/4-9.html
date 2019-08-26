@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getPay(){
+				document.write('<table width="40%" align="center">');
+				var name ="";
+				var hours =0;
+				var rate =0;
+				var grossPay =0;
+				var netPay =0;
+				document.write('<tr><td>name</td><td>gross pay</td><td>net pay</td></tr>');
+				name = prompt("Enter the first employee's name:");
+				do
+				{
+					hours = parseInt(prompt("How many hours did "+name+"work this week?"));
+					rate = parseInt(prompt("What is "+name+"'s hourly pay rate?"));
+					if(hours>40){
+						grossPay= (40 * rate)+((hours -40)* 1.5 * rate);
+					}else{
+						grossPay= hours * rate;
+					}
+					netPay= grossPay *.85;
+					document.write('<tr><td>'+name+'</td><td>$'+grossPay+'</td><td>$'+netPay+'</td><tr>');
+					name = prompt("Enter another employee's name or enter 'done' when finished:");
+				}
+				while (name !="done"){
+					document.write('</table>');
+				}
+				
+				
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Calculate Employees Paychecks</h1>
+				</td>
+				<p>You can enter payroll information for all employees.Paychecks are calculated as shown:</p>
+				<table width="70%">
+					<tr>
+						<td>
+							Gross pay for first 40 hours:
+						</td>
+						<td>
+							hourly rate * hours worked
+						</td>
+					</tr>
+					<tr>
+						<td>Overtime:</td>
+						<td>
+							overtime hours * 1.5 * hourly rate
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Tax rate for all employees:
+						</td>
+						<td>
+							15% of gross pay
+						</td>
+					</tr>
+				</table>
+				<p><input type="button" id="pay" value="Click to begin entering employees" onclick="getPay()"/></p>
+			</tr>
+		</table>
+		
+		
+	</body>
+</html>
