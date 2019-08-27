@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getClass() {
+				document.write('<table width="40%" align="center">');
+				var fname = "";
+				var lname = "";
+				var id = "";
+				var username = 0;
+				var course = "";
+				course = prompt("What is the name of this course?");
+				document.write('<tr><td colspan="4" align="center">' + course + '</td></tr>');
+				document.write('<tr><td>first name</td><td>last name</td><td>username</td></tr>');
+				fname = prompt("Enter one student's first name");
+				lname = prompt("Enter one student's last name");
+				id = prompt("Enter the student's identification number:");
+				do {
+					username = fname + id;
+					document.write('<tr><td>' + fname + '</td><td>' + lname + '</td><td>' + id + '</td><td>' + username + '</td></tr>');
+					fname = prompt("Enter another student's first name or enter 'x' when finished:");
+					lname = prompt("Enter another student's last name or 'x' when finished:");
+					id = prompt("Enter another student's identification number of enter -9 when finished:");
+				} while (id != -9)
+				document.write('</table>');
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Create Usernames</h1>
+					<p>You can enter each student's name and ID number and <br /> this program will create usernames for you</p>
+			<tr>
+				<td>
+					<p>&nbsp;</p>
+					<p><input type="button" id="username" value="Click to begin entering names" onclick="getClass()"></p>
+
+
+
+
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
