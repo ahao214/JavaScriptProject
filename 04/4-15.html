@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>isNan方法</title>
+		<script type="text/javascript">
+			function getBracelet() {
+				var bracelets = (prompt("How many bracelets do you want?", ""));
+				var check = bracelets % 1;
+
+				while ((isNaN(check)) || (check != 0) || (bracelets < 0)) {
+					bracelets = prompt("Please enter a position whole number.How many bracelets do you want?", "");
+					var check = bracelets % 1;
+				}
+				document.getElementById("theOrder").innerHTML = "<h3>You are ordering " + bracelets +
+					" bracelets.<br/>Thank you.</h3>";
+			}
+		</script>
+
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Order Your Bracelets Now!</h1>
+					<p><input type="button" id="bracelets" value="Order bracelets" onclick="getBracelet()"></p>
+				</td>
+			</tr>
+			<tr>
+				<td id="theOrder">
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+
+
+		</table>
+	</body>
+</html>

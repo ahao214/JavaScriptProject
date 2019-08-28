@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>charAt和length</title>
+		<script type="text/javascript">
+			function getEmail() {
+				var asSign = "@";
+				email = prompt("Enter your email address");
+				numChars = email.length;
+				okSign = 1;
+				for (j = 1; j < numChars; j++) {
+					if (email.charAt(j) == asSign) {
+						okSign = 0;
+					}
+				}
+
+				if (okSign == 0) {
+					if (email.charAt(numChars - 4) != ".") {
+						document.getElementById("message").innerHTML = "<h3>You enter" + email +
+							".This is not a valid email address.</h3>";
+					} else {
+						document.getElementById("message").innerHTML = "<h3>You entered " + email +
+							".This is a valid email address.</h3>"
+					}
+				} else {
+						document.getElementById("message").innerHTML="<h3>You entered "+email+".This is not a valid email address.</h3>"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Enter your contact information!</h1>
+			<tr>
+				<td>
+					<p>&nbsp;</p>
+					<p><input type="button" id="email" value="Begin now" onclick="getEmail()"></p>
+				</td>
+			</tr>
+			<tr>
+				<td id="message">
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+			</td>
+			</tr>
+		</table>
+	</body>
+</html>
