@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>范围</title>
+		<script type="text/javascript">
+			function getStats() {
+				var score = 0;
+				var sum = 0;
+				var count = 1;
+				var average = 0;
+				var high = 0;
+				var low = 0;
+				score = parseInt(prompt("Enter a score or enter -99 when you're finished:", " "));
+				low = score;
+				high = score;
+				while (score != -99) {
+					sum += score;
+					count++;
+					score = parseInt(prompt("Enter a score or enter -99 when you're finished:", " "));
+					if (score > high) {
+						high = score;
+					}
+					if ((score < low) && (score != -99)) {
+						low = score;
+					}
+				}
+				average = parseInt(sum / (count - 1));
+				document.write("<p>The number of scores enter is:" + (count - 1) + ".</p>");
+				document.write("<p>The sum of these scores is :" + sum + "</p>");
+				document.write("<p>The average of these scores is:" + average + "</p>");
+				document.write("<p>The lowest score is:" + low + "</p>");
+				document.write("<p>The highest of score is:" + high + "</p>");
+			}
+		</script>
+	</head>
+	<body onload="getStats()">
+
+	</body>
+</html>

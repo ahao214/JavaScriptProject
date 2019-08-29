@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>加起来</title>
+		<script type="text/javascript">
+			function getSum() {
+				var score = 0;
+				var sum = 0;
+				while (score != -999) {
+					sum += score;
+					score = parseInt(prompt("Enter a score or enter -999 when you're finished:", ""));
+				}
+				document.write("the sum of these scores is :" + sum + ".");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Exam 1 Scores</h1>
+		<h3>Click to enter student's scores</h3>
+		<p><input type="button" id="scores" value="Enter the scores" onclick="getSum()"></p>
+
+	</body>
+</html>

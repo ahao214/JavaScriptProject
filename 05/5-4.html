@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>奇数和偶数</title>
+		<script type="text/javascript">
+			function getStats() {
+				var question = "";
+				var count = 0;
+				var oddCount =0;
+				var evenCount =0;
+				var name ="";
+				name =(prompt("What is this student's name?"," "));
+				alert("At each prompt enter 'y' if the student got the question correct or 'n' for incorrect");
+				for(count=1;count<10;count++){
+					question=(prompt("Question "+count+":",""));
+					if((question=="n") && (count%2)==0){
+						evenCount++;
+					}
+					if(question=="n" && count%2!=0){
+						oddCount++;
+					}					
+				}
+				document.write("<p>Results for "+name+":</p>");
+				document.write("<p>Out of the 20 questions on this exam:</p>");
+				document.write("<p>The number of the odd questions missed is :"+oddCount+"</p>");
+				document.write("<p>The number of even questions missed is:"+evenCount+"</p>");
+
+
+			}
+		</script>
+	</head>
+	<body onload="getStats()">
+	</body>
+</html>

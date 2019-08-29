@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math函数</title>
+		<script type="text/javascript">
+			function floatToInteger(){
+				var floatNum = 0;
+				var newValue =0;
+				floatNum = prompt("Enter any number or enter -99 to quit:"," ");
+				while(floatNum!=-99){
+					document.write("<p>You originall entered:"+floatNum+"</p>");
+					newValue=parseInt(floatNum);
+					document.write("<p>The result of parseInt(x) is:"+newValue+"</p>");
+					newValue = Math.floor(floatNum);
+					document.write("<p>The result of Math.floor(x) is:"+newValue+"</p>");
+					newValue = Math.ceil(floatNum);
+					document.write("<p>The result of Math.ceil(x) is:"+newValue+"</p>");
+					newValue=Math.round(floatNum);
+					document.write("<p>The result of Math.round(x) is:"+newValue+"</p>");
+					floatNum=prompt("Enter any number or enter -99 to quit:"," ");
+				}
+			}
+		</script>
+	</head>
+	<body onload="floatToInteger()">
+	</body>
+</html>

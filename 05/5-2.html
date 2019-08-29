@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>平均数</title>
+		<script type="text/javascript">
+				
+			function getAverage(){
+				var score =0;
+				var sum =0;
+				var count =0;
+				var average =0;
+				while(score!=-99){
+					sum +=score;
+					count++;
+					score = parseInt(prompt("Enter a score or enter -99 when you're finished:"," "));					
+				}
+				average = sum/(count-1);
+				document.write("<p>The sum of these scores is :"+sum+"</p>");
+				document.write("<p>The average of these scores is :"+average+"</p>");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>Exam 1 Scores</h1>
+		<h3>Click to enter student's scores</h3>
+		<p><input type="button" id="scores" value="Enter the scores" onclick="getAverage()"></p>
+		
+		
+	</body>
+</html>
