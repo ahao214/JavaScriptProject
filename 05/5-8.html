@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>在switch结构中使用break</title>
+		<script type="text/javascript">
+			function spellIt() {
+				var letter = prompt("Pick a letter between a and d", " ");
+				switch (letter) {
+					case "a":
+						document.write("<p>" + letter + " is for aardvark.</p>");
+						break;
+					case "b":
+						document.write("<p>" + letter + " is for baboon.</p>");
+						break;
+					case "c":
+						document.write("<p>" + letter + " is for canary.</p>");
+						break;
+					case "d":
+						document.write("<p>" + letter + " is for donkey.</p>");
+						break;
+					default:
+						document.write("<p>" + letter + " is not an option.</p>");
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+
+		<h1>Learn your letters</h1>
+		<p><input type="button" value="Begin" onclick="spellIt()"></p>
+	</body>
+</html>

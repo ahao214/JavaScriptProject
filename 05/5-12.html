@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getGroup() {
+				var i = 0;
+				var score = 0;
+				var name = "";
+				var students = 0;
+				document.write("<table width='60%' align='center'><tr><td>Students who must retake teh exam</td></tr>");
+				students = parseInt(prompt("How many students took this exam?", " "));
+				for (i = 0; i < students; i++) {
+					name = prompt("Enter the student's name:", " ");
+					score = parseInt(prompt("Enter the student's score:", " "));
+
+					if (score >= 95) {
+						continue;
+					}
+					document.write("<tr><td>" + name + "</td></tr>");
+				}
+				document.write("</table>");
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Student who must do the retake</h1>
+					<p><input type="button" id="scores" value="Get List of Retake Students" onclick="getGroup()"></p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

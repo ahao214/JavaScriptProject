@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getStats() {
+				var score = 0;
+				var sum = 0;
+				var count = 1;
+				var average = 0;
+				var high = 0;
+				var low = 0;
+				score = parseInt(prompt("Enter a score or enter -99 when you're finished:", " "));
+				low = score;
+				high = score;
+				while (score != -99) {
+					sum += score;
+					count++;
+					score = parseInt(prompt("Enter a score or enter -99 when you're finished:", " "));
+					if (score > high) {
+						high = score;
+					}
+					if ((score < low) && (score != -99)) {
+						low = score;
+					}
+				}
+				average = Math.round(sum / (count - 1));
+				document.write("<p>The number of scores entered is :" + (count - 1) + "</p>");
+				document.write("<p>The average of these scores is:" + average + "</p>");
+				document.write("<p>The lowest score is :" + low + "</p>");
+				document.write("<p>The highest score is :" + high + "</p>");
+			}
+
+
+			function getStudent() {
+				var question = "";
+				var name = "";
+				name = (prompt("What is this student's name?", " "));
+				var oddCount = 0;
+				var evenCount = 0;
+				var count = 0;
+				alert("At each prompt enter 'y' if the student got the question correct or 'n' for incorrect");
+				for (count = 1; count < 10; count++) {
+					question = (prompt("Question:" + count + ":", " "));
+					if ((question == "n") && (count % 2 == 0)) {
+						evenCount++;
+					}
+
+					if (question == "n" && count % 2 != 0) {
+						oddCount++;
+					}
+				}
+				document.write("<p>Results for " + name + ":</p>");
+				document.write("<p>Out of the 20 questions on this exam:</p>");
+				document.write("<p>The number of odd questions missed is:" + oddCount + "</p>");
+				document.write("<p>The number of even questions missed is :" + evenCount + "</p>");
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Exam 1</h1>
+					<h3>Get a summary of exam results</h3>
+					<p><input type="button" id="scores" value="Class results" onclick="getStats()"></p>
+					<h3>Get an individual student's results</h3>
+					<p><input type="button" id="studentscores" value="Student results" onclick="getStudent()"></p>
+				</td>
+			</tr>
+		</table>
+
+
+	</body>
+</html>
