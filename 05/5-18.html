@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>使用循环创建图案</title>
+		<script type="text/javascript">
+			function getName() {
+				var name = " ";
+				var count = 0;
+				var symbol = "* ";
+				symbol = prompt("Pick a keyboard smybol to border your name,such as a * or #", " ");
+				name = prompt("What is your name?", " ");
+				for (count = 1; count <= (name.length + 4); count++) {
+					document.write(symbol + " ");
+				}
+				document.write("<br/>");
+				document.write(symbol + " " + symbol + " " + name + " " + symbol + " " + symbol);
+				document.write("<br/>");
+				for (count = 1; count <= (name.length + 4); count++) {
+					document.write(symbol + " ");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Name in a box</h1>
+					<p><input type="button" id="name" value="Put your name in a box" onclick="getName()"></p>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

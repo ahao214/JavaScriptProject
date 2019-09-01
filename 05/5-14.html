@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getLoops() {
+				var y = 3;
+				var count1 = 1;
+				var count2 = 1;
+				do {
+					var x = count1 + 1;
+					var count2 = 1;
+					document.write("<h3>Pass Number:" + count1 + "</h3>");
+
+					while (count2 <= y) {
+						var z = y * x;
+						document.write("<p>x=" + x + ",y=" + y + ",z=" + z + "</p>");
+						x++;
+						count2++;
+					}
+				} while (count1 < y)
+
+			}
+		</script>
+	</head>
+	<body onload="getLoops()">
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绘制图形</title>
+		<script type="text/javascript">
+			<!--正方形-->
+			function getSquare() {
+				var side = 0;
+				var row = 1;
+				var col = 1;
+				var symbol = "* ";
+				symbol = prompt("Pick a keyboard symbol for your square, such as a * or #", " ");
+				side = prompt("How big is the side of your square?The value must be a positive number:", " ");
+				side = parseInt(side);
+				while (side < 1) {
+					side = prompt("How big is the side of your square?The value must be a positive number:", " ");
+					side = parseInt(side);
+				}
+				for (row = 1; row <= side; row++) {
+					for (col = 1; col <= side; col++)
+						document.write(symbol + " ");
+					document.write("</br>");
+				}
+			}
+
+			<!--长方形-->
+			function getRectangle() {
+				var width = 0;
+				var height = 0;
+				var row = 1;
+				var col = 1;
+				var symbol = "* ";
+				symbol = prompt("Pick a keyboard symbol for your rectangle,such as a * or #", " ");
+				width = prompt("What is the width? The value must be a positive number", " ");
+				width = parseInt(width);
+				while (width < 1) {
+					width = prompt("What is the width? The value must be a positive number", " ");
+					width = parseInt(width);
+				}
+				length = prompt("What is the width? The value must be a positive number", " ");
+				length = parseInt(length);
+				while (length < 1) {
+					length = prompt("What is the width? The value must be a positive number", " ");
+					length = parseInt(length);
+				}
+
+
+				for (row = 1; row <= width; row++) {
+					for (col = 1; col <= length; col++) {
+						document.write(symbol + " ");
+					}
+					document.write("<br/>");
+				}
+			}
+			<!--三角形-->
+			function getTriangle() {
+				var row = 1;
+				var base = 1;
+				var symbol = "* ";
+				var col = 0;
+				symbol = prompt("Pick a keyboard symbol for your triangle, such as a * or #", " ");
+				base = prompt("How big is the base of your triangle?The value must be a positive number:", " ");
+				base = parseInt(base);
+				while (base < 1) {
+					base = prompt("How big is the base of your triangle?The value must be a positive number:", " ");
+					base = parseInt(base);
+				}
+				for (row = 1; row <= base; row++) {
+					for (col = 1; col <= row; col++) {
+						document.write(symbol + " ");
+					}
+					document.write("<br/>");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="70%">
+			<tr>
+				<td colspan="2">
+					<h1>Shapes</h1>
+					<h3>Pick a shape</h3>
+					<p><input type="button" id="square" value="Draw a square" onclick="getSquare()">
+						<input type="button" id="triangle" value="Draw a triangle" onclick="getTriangle()" />
+						<input type="button" id="rectangle" value="Draw a rectangle" onclick="getRectangle()" />
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

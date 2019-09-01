@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getLoops() {
+				var x = 0;
+				var y = 0;
+				var z = 0;
+				for(x =1;x<4;x++){
+					document.write("<h3>Pass"+x+"</h3>");
+					for(y=2;y<10;y+=3){
+						z= x+y;
+						document.write("<p>"+x+"+"+y+"="+z+"</p>");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body onload="getLoops()">
+	</body>
+</html>

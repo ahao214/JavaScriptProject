@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var name1 = "";
+			var name2 = "";
+			name1 = prompt("Enter your name:", " ");
+			name2 = prompt("Enter your name:", " ");
+			var playerOne = 0;
+			var playerTwo = 0;
+			var oneCard = 0;
+			var twoCard = 0;
+			var count = 1;
+			document.write("<table width='40%' align='center'><tr><td colspan='2'><h3>The Game of War</h3></td></tr>");
+
+			while (playerOne < 10 && playerTwo < 10) {
+				oneCard = Math.floor(Math.random() * 13 + 1);
+				twoCard = Math.floor(Math.random() * 13 + 1);
+				if (oneCard > twoCard) {
+					playerOne++;
+				} else {
+					if (twoCard > oneCard) {
+						playerTwo++;
+					}
+				}
+
+				document.write("<tr><td colspan='2'>&nbsp;</td></tr><tr><td colspan='2'>Deal Number" + count + ":</td></tr>");
+
+				document.write("<tr><td>" + name1 + "'s card:" + oneCard + "--Score: " + playerOne + "</td>");
+
+				document.write("<tr><td>" + name2 + "'s card:" + twoCard + "--Score: " + playerTwo + "</td>");
+				count++;
+			}
+
+			if (playerOne == 10 && playerTwo != 10) {
+				document.write("<tr><td colspan='2'><h3>The winner is:" + name1 + "!</h3></td></tr>");
+
+			}
+			if (playerOne != 10 && playerTwo == 10) {
+				document.write("<tr><td colspan='2'><h3>The winner is:" + name2 + "!</h3></td></tr>");
+				document.write("</table>");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
