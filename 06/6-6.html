@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function pickEntree(picked) {
+				var entree = document.getElementById(picked).value;
+				document.getElementById("main_dish").innerHTML = entree;
+			}
+
+			function pickSides() {
+				var flag = false;
+				var i = 0;
+				var side1 = "";
+				var side2 = "";
+				for (i = 1; i <= 6; i++) {
+					if ((document.getElementById(i).checked == true) && (flag == false)) {
+						side1 = document.getElementById(i).value;
+						flag = true;
+					} else if ((document.getElementById(i).checked == true) && (flag == true)) {
+						side2 = document.getElementById(i).value;
+					}
+				}
+				document.getElementById('side_one').innerHTML = side1;
+				document.getElementById('side_two').innerHTML = side2;
+			}
+		</script>
+	</head>
+	<body>
+		<table align="center" width="60%">
+			<form name="menu">
+				<tr><td colspan="2"><h2><br/>Select Your Meal</h2></td></tr>
+				<tr><td>Pick your main course:<br/>
+					<input type="radio" name="entree" id="steak" value="Rib-Eye Steak" onclick="pickEntree('steak')" />Rib-Eye steak<br/>
+					
+					<input type="radio" name="entree" id="fish" value="Fish" onclick="pickEntree('fish')" />Fish<br/>
+					<input type="radio" name="entree" id="beef" value="Beef" onclick="pickEntree('beef')" />Beef<br/>
+					<input type="radio" name="entree" id="chicken" value="Chicken" onclick="pickEntree('chicken')" />Chicken<br/>
+				</td>
+				<td>
+					Pick two side dishes<br />
+					<input type="checkbox" name="sides" id="1" value="French Fries" />French Fries<br />
+					
+					<input type="checkbox" name="sides" id="2" value="Baked Photo" />Baked Photo<br />
+					<input type="checkbox" name="sides" id="3" value="Cole Fries" />Cole Fries<br />
+					<input type="checkbox" name="sides" id="4" value="Garden Fries" />Garden Fries<br />
+					<input type="checkbox" name="sides" id="5" value="Mixed Fries" />Mixed Fries<br />
+					<input type="checkbox" name="sides" id="6" value="Apple Fries" />Apple Fries<br />
+					
+					
+				</td>
+				
+				</tr>
+				<tr>
+					<td>
+						<input type="reset" value="ooops! Let me change my selections" />
+					</td>
+					<td>
+						<input type="button"  onclick="pickSides()" value="enter my side dish selections"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h2>Entree selected:<span id="main_dish">&nbsp;</span></h2>
+						<h2>
+							First side dish:<span id="side_one">&nbsp;</span>
+						</h2>
+						<h2>
+							Second side dish:<span id="side_two">&nbsp;</span>
+						</h2>
+					</td>
+				</tr>
+				
+			</form>
+			
+			
+		</table>
+		
+	</body>
+</html>

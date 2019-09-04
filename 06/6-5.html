@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function checkIt() {
+				document.getElementById("china").checked = true;
+			}
+
+			function uncheckIt() {
+				document.getElementById("china").checked = false;
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Where do you live?</h2>
+		<input type="checkbox" name="country" id="argentina" value="Argentina" />Argentina<br />	
+		<input type="checkbox" name="country" id="china" value="China" />Chine<br />
+		<input type="checkbox" name="country" id="usa" value="Usa" />Use<br />
+		<input type="checkbox" name="country" id="english" value="English" />English<br />
+		<input type="checkbox" name="country" id="spain" value="Spain" />Spain<br />
+		<p>
+			<button onclick="checkIt()">Check Tibet</button>
+			<button onclick="uncheckIt()">Uncheck Tibet</button>
+		</p>
+
+
+
+
+
+	</body>
+</html>
