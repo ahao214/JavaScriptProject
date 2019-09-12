@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getPasswordInfo(pword) {
+				var pwordSize =0;
+				var userWord ="";
+				var wordLength=0;
+				pwordSize =document.getElementById(pword).size;
+				document.getElementById('field_size').innerHTML= pwordSize;
+				userWord = document.getElementById(pword).value;
+				document.getElementById('pword').innerHTML= userWord;
+				wordLength = userWord.length;
+				document.getElementById('word_size').innerHTML= wordLength;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Enter a password that is between 4 and 8 charachers,uisng only digits(0-9) and letters.</h2>
+		<p><input type="password" name="user_pwrd" id="password"></p>
+		<input type="button" onclick="getPasswordInfo('password')" value="OK" />
+		<p>Password information:</p>
+		Number charachers allowed:<span id="field_size">&nbsp;</span><br />
+		Number charachers entered:<span id="word_size">&nbsp;</span><br />
+		Password entered:<span id="pword">&nbsp;</span>
+	</body>
+</html>

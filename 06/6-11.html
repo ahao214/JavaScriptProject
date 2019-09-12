@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>使用一个隐藏的对象</title>
+		<script type="text/javascript">
+			function customerInfo(cName) {
+				var dinerName = document.getElementById(cName).value;
+				document.getElementById('cust_name').innerHTML = dinerName;
+			}
+
+			function customerPhone(cell) {
+				var phone = document.getElementById(cell).value;
+				document.getElementById('cell_phone').innerHTML = phone;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="order" method="post" id="dinner" action="mailto:manager@mealstogo.net?subject=Dinner Order" enctype="text/plain">
+			<input type="hidden" name="meal" id="dinner" value="dinner choice" />
+			<h2><br />Select Your Meal</h2>
+			<div style="width: 80%;">
+				<div style="width: 40%; float: left;">
+					<fieldset>
+						<legend>Your Information</legend>
+						<h3>Enter the following information:</h3>
+						<label>Your name:<br /></label>
+						<input type="text" name="dinername" id="dinername" size="30" value="" />
+						<input type="button" onclick="customerInfo('dinername')" value="OK" />
+						<p>We will call your cell phone when your order is ready.<br /></p>
+						<label>Phone:<br /></label>
+						<input type="text" name="phone" id="phone" size="30" value="" />
+						<input type="button" onclick="customerPhone('phone')" value="OK" /><br />
+
+					</fieldset>
+				</div>
+				the rest of the HTML page goes here
+											<div>
+												<input type="submit" value="submit my order" /><br/>
+											</div>
+
+			</div>
+
+
+		</form>
+
+
+
+	</body>
+</html>
