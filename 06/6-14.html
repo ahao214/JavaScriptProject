@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function checkPwd(pwd) {
+				var userWord = "";
+				var char1 = "";
+				var wordLength = 0;
+				var checkLength = false;
+				var checkChar = false;
+				var msg = "";
+				var checkDigit = false;
+				var checkSpecial = false;
+				userWord = document.getElementById(pwd).value;
+				document.getElementById('show_word').innerHTML = userWord;
+
+				//check length of word
+				if (checkLength == false) {
+					if ((userWord.length < 4) || (userWord.length > 8)) {
+						msg = "The password must be between 4 and 8 characters.Try again."
+						document.getElementById('error_msg').innerHTML = msg;
+						userWord = document.getElementById(pwd).value;
+					} else {
+						checkLength = true;
+					}
+				}
+
+				//check first character
+				char1 = userWord.substr(0, 1);
+				if (checkChar == false) {
+					if ((char1 < 65) || ((char1 > 90) || (char1 < 97)) || (char1 > 122)) {
+						msg = 'The first character must be a letter of the alphabet.Try again';
+						document.getElementById('error_msg').innerHTML = msg;
+						userWord = document.getElementById(pwd).value;
+					} else {
+						checkChar = true;
+					}
+				}
+
+				//check for digit
+
+				wordLength = userWord.length;
+				for (i = 1; i <= (wordLength - 1); i++) {
+					if ((userWord.charCodeAt(i) >= 47) && (userWord.charCodeAt(i) <= 85)) {
+						checkDigit = true;
+						break;
+					}
+
+				}
+				if (checkDigit == false) {
+					msg = "You must have at least one number in the password.Try again.";
+					document.getElementById('error_msg').innerHTML = msg;
+					userWord = document.getElementById(pwd).value;
+
+				}
+
+				//check for special character					
+				for (i = 1; i <= (wordLength - 1); i++) {
+					if ((userWord.charCodeAt(i) == 35) || (userWord.charAt(i) == 36) || (userWord.charCodeAt(i) == 37)) {
+						checkSpecial = true;
+						break;
+					}
+
+				}
+				if (checkSpecial == false) {
+					msg = "You must have one special character(#,$ or %) i the password.Try again.";
+					document.getElementById('error_msg') = msg;
+					userWord = document.getElementById(pwd).value;
+				}
+				if ((checkLength == true) && (checkChar == true) && (checkDigit == true) && (checkSpecial == true)) {
+					msg = "Congratulations! You have successfully entered a valid password!";
+					document.getElementById('error_msg').innerHTML = msg;
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Enter a password in the box below.Your password must:</h3>
+		<ul>
+			<li>contain between 4 and 8 characters</li>
+			<li>begin with a letter of the alphabet(upper or lowercase)</li>
+			<li>contain at least one digit(0-9)</li>
+			<li>contain one of the following special characters:dollar sign($),percent sign(%),or pound sign(#)</li>
+		</ul>
+		<p>
+			<input type="password" name="user_word" id="password" size="" />
+
+			<input type="button" onclick="checkPwd('password')" value="OK" />
+		</p>
+		<p>
+			<span id="error_msg">&nbsp;</span><br />
+		</p>
+		<p>Password information:<br />
+			Password entered:<span id="show_word">&nbsp;</span>
+		</p>
+
+
+
+
+	</body>
+</html>
