@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function setYellow(x) {
+				document.getElementById(x).style.backgroundColor = "yellow";
+			}
+
+			function setKhaki(x) {
+				document.getElementById(x).style.backgroundColor = "khaki";
+			}
+
+			function setGreen(x) {
+				document.getElementById(x).style.backgroundColor = "green";
+			}
+
+			function setOrange(x) {
+				document.getElementById(x).style.backgroundColor = "orange";
+			}
+
+			function setRed(x) {
+				document.getElementById(x).style.backgroundColor = "red";
+			}
+
+			function setPurple(x) {
+				document.getElementById(x).style.backgroundColor = "purple";
+			}
+
+			function getFname(firstName) {
+				var fName = document.getElementById(firstName).value;
+				document.getElementById('first_name').innerHTML = fName;
+			}
+
+			function getLname(lastName) {
+				var lName = document.getElementById(lastName).value;
+				document.getElementById('last_name').innerHTML = lName;
+			}
+
+			function getNname(nickName) {
+				var nName = document.getElementById(nickName).value;
+				document.getElementById('nick_name').innerHTML = nName;
+			}
+
+			function getCar(car) {
+				var dreamCar = document.getElementById(car).value;
+				document.getElementById('dream_car').innerHTML = dreamCar;
+			}
+
+			function getMeal(meal) {
+				var favMeal = document.getElementById(meal).value;
+				document.getElementById('favorite_meal').innerHTML = favMeal;
+			}
+
+			function getVacation(vacation) {
+				var vacationSpot = document.getElementById(vacation).value;
+				document.getElementById('vacation_spot').innerHTML = vacationSpot;
+			}
+		</script>
+
+		<style type="text/css">
+			body {
+				margin: 5%;
+			}
+
+			p {
+				font-weight: bold;
+				color: #006A9D;
+			}
+
+			label {
+				font-weight: bold;
+				color: #006A9D;
+			}
+
+			h3 {
+				color: #006A9D;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			Enter your information in the boxes.After you satisfied with each entry,press the OK button to see the information
+			displayed below.Use the TAB key to move from box to box and don't be surprised by where the TABs take you.
+		</p>
+
+		<div style="width:90%;">
+			<div style="width:33%; float: left;">
+				<fieldset>
+					<label>First Name:<br /></label>
+					<input type="text" name="firstname" id="firstname" size="30" value="" tabindex="1" onfocus="setYellow(this.id)" />
+					<input type="button" onclick="getFname('firstname')" value="OK" tabindex="1" /><br />
+				</fieldset>
+			</div>
+
+			<div style="width:33%;  float: left;">
+				<fieldset>
+					<label>Dream Car:<br /></label>
+					<input type="text" name="car" id="car" size="30" value="" tabindex="4" onfocus="setKhaki(this.id)" />
+					<input type="button" onclick="getCar('car')" value="OK" tabindex="4" /><br /><br />
+				</fieldset>
+			</div>
+
+			<div style="width:33%; float: left;">
+				<fieldset>
+					<label>Dream vacation:<br /></label>
+					<input type="text" name="vacation" id="vacation" size="30" value="" tabindex="6" onfocus="setGreen(this.id)" />
+					<input type="button" onclick="getVacation('vacation')" value="OK" tabindex="6" /><br /><br />
+				</fieldset>
+
+			</div>
+
+			<div style="width:33%; float: left;">
+				<fieldset>
+					<label>Nickname:<br /></label>
+					<input type="text" name="nickname" id="nickname" size="30" value="" tabindex="3" onfocus="setOrange(this.id)" />
+					<input type="button" onclick="getNname('nickname')" value="OK" tabindex="3" /><br /><br />
+				</fieldset>
+
+			</div>
+
+			<div style="width:33%; float: left;">
+				<fieldset>
+					<label>Favorite meal:<br /></label>
+					<input type="text" name="meal" id="meal" size="30" value="" tabindex="5" onfocus="setRed(this.id)" />
+					<input type="button" onclick="getMeal('meal')" value="OK" tabindex="5" /><br /><br />
+				</fieldset>
+			</div>
+
+			<div style="width:33%; float: left;">
+				<fieldset>
+					<label>Last Name:<br /></label>
+					<input type="text" name="lastname" id="lastname" size="30" value="" tabindex="2" onfocus="setPurple(this.id)" />
+					<a href="JavaScript:getLname('lastname')">
+						<img src="../images/ok.gif" />
+					</a>
+				</fieldset>
+			</div>
+
+
+		</div>
+
+		<div style="clear: both;"></div>
+		<div>
+			<input type="reset" value="ooops!I made a mistake.Let me start over." /><br /><br />
+		</div>
+
+		<h3>Your information:</h3>
+		<p>
+			First Name:<span id="first_name">&nbsp;</span><br />
+			Last Name:<span id="last_name">&nbsp;</span><br />
+			Nickname:<span id="nick_name">&nbsp;</span><br />
+			Dream car:<span id="dream_car">&nbsp;</span><br />
+			Favorite meal:<span id="favorite_meal">&nbsp;</span><br />
+			Vacation desired:<span id="vacation_spot">&nbsp;</span>
+
+		</p>
+
+
+
+	</body>
+</html>
