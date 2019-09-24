@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function quotinet(x, y) {
+				illegal = "Illegal division operation";
+				if (y != 0) {
+					return x / y;
+				} else {
+					return illegal;
+				}
+			}
+
+			function clickIt() {
+				var divTop = parseFloat(prompt("Enter the divison:"));
+				var divBottom = parseFloat(prompt("Enter the dividend:"));
+				document.getElementById("division").innerHTML = (divTop + "divided by" + divBottom);
+				var division;
+				division = quotinet(divTop, divBottom);
+				if (isNaN(division)) {
+					division = "illegal division operation";
+				} else {
+					division = division.toFixed(2);
+				}
+				document.getElementById("result").innerHTML = division;
+
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="clickIt()" value="Enter a divison proble" />
+		<h2><span id="division">&nbsp;</span></h2>
+		<h2>The result is:<span id="result">&nbsp;</span></h2>
+	</body>
+</html>

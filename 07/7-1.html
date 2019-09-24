@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建一个简单的函数</title>
+		<script type="text/javascript">
+			function quotinet(x, y) {
+				illegal = "Illegal division operation";
+				if (y != 0) {
+					return x / y;
+				} else {
+					return illegal;
+				}
+			}
+
+			function clickIt() {
+				document.write(quotinet(60, 5));
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="clickIt()" value="How much is 60 divided by 5?" />
+	</body>
+</html>
