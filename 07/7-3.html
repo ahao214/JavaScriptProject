@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function quotinet(x, y) {
+				illegal = "Illegal division operation";
+				if (y != 0) {
+					return x / y;
+				} else {
+					return illegal;
+				}
+			}
+
+			function divideIt() {
+				var divTop = parseFloat(prompt("Enter the division"));
+				var divBottom = parseFloat(prompt("Enter the dividend"));
+				document.getElementById("division").innerHTML = (divTop + " divided by" + divBottom);
+				var division = quotinet(divTop, divBottom);
+				if (isNaN(division)) {
+					division = "illegal division opeartion";
+				} else {
+					division = division.toFixed();
+				}
+				document.getElementById("result").innerHTML = division;
+			}
+
+			function getMileage() {
+				var miles = parseFloat(prompt("How many miles did you dirve on this trip?"));
+				var gallons = parseFloat(prompt("How many gallons of gas did you use?"));
+				var trip = quotinet(miles, gallons);
+
+				if (isNaN(trip)) {
+					trip = "illegal division operation";
+					document.getElementById('mileage').innerHTML = ("Cannot complete the calculation." + trip);
+				} else {
+					trip = trip.toFixed();
+					document.getElementById('mileage').innerHTML = ("Your mileage for this trip was " + trip + "mpg.");
+				}
+
+				function getBMI() {
+					var feet = parseFloat(prompt("How tall are you?Enter your height in feet first:"));
+					var inches = parseFloat(prompt("How many inches over " + feet + " feet are you?"));
+					var heighe = (feet * 12 + inches);
+					var hInches = height * heighe;
+					var weight = parseFloat(prompt(
+						"What is your weight is pounds?You may include a partial pound,like 128.5 lbs,for example."));
+					document.getElementById('height').innerHTML = (height.toFixed(2));
+					document.getElementById('weight').innerHTML = (weigth.toFixed(2));
+					var bmi = (quotient(weight, hInches) * 703);
+					if (isNaN(bmi)) {
+						bmi = "illegal division operation";
+						document.getElementById('bmi').innerHTML = ("Cannot complete the calculation." + bmi);
+					} else {
+						bmi = bmi.toFixed(2);
+						document.getElementById('bmi').innerHTML = (" " + bmi);
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<h2>Using the quotinet() function</h2>
+		<div style="width:80%">
+			<div style="width:50%; float: left;">
+				<fieldset>
+					<legend>
+						Division Problem:
+					</legend>
+					<input type="button" onclick="divideIt()" value="Enter a division problem" />
+					<h2><span id="division">&nbsp;</span></h2>
+					<h2>The result is:<span id="result">&nbsp;</span></h2>
+				</fieldset>
+			</div>
+			<div style="width:50%;float: left;">
+				<fieldset>
+					<legend>
+						Gas Mileage
+					</legend>
+					<input type="button" onclick="getMileage()" value="Find the gas mileage" />
+					<h2><span id="mileage">&nbsp;</span></h2>
+				</fieldset>
+			</div>
+			<div style="clear: both;"></div>
+		</div><br />
+
+		<div style="width:80%">
+			<fieldset>
+				<legend>
+					BMI(Body Mass Index) Calculator
+				</legend>
+				<p>
+					The formula to calculate your BMI is your weight in pounds(lbs) divided by your height in inches (in) squared and
+					multiplied by a conversion factor of 703.But don't worry about doing the math!If you enter your weigth(lbs) and
+					height(in feet and inches),the program will calculate you BMI
+				</p>
+				<input type="button" onclick="getBMI()" value="Calculate your BMI(Body Mass Index)" />
+				<h3>Your height(in inches):<span id="height">&nbsp;</span></h3>
+				<h3>Your weight(in pounds):<span id="weight">&nbsp;</span></h3>
+				<h3>Your BMI:<span id="bmi">&nbsp;</span></h3>
+			</fieldset>
+
+
+		</div>
+
+
+
+	</body>
+</html>

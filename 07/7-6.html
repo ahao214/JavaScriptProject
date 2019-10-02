@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>局部变量</title>
+		<script type="text/javascript">
+			function getAges() {
+				var age = 0;
+				age = parseInt(prompt("How old is your grandmother?"));
+				pet();
+				function pet() {
+					var age = parseInt(prompt("How old is your puppy?"));					
+					document.getElementById('puppy').innerHTML = (age + 10);
+				}
+				document.getElementById('granny').innerHTML=(age+10);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="getAges()" value="Find the age in 10 years" /><br />
+		<h3>Your granny's age in 10 years:<span id="granny">&nbsp;</span></h3>
+		<h3>Your puppy's age in 10 years:<span id="puppy">&nbsp;</span></h3>
+	</body>
+</html>
