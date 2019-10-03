@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>setTimeout()函数</title>
+		<script type="text/javascript">
+			function startClock() {
+				var today = new Date();
+				var hour = today.getHours();
+				var min = today.getMinutes();
+				var sec = today.getSeconds();
+				var timer;
+				min = checkTime(min);
+				sec = checkTime(sec);
+				document.getElementById('now').innerHTML = ("Today's date:" + today);
+				document.getElementById('clock').innerHTML = (hour + ":" + min + ":" + sec);
+				timer = setTimeout('startClock()', 500);
+
+			}
+
+			function checkTime(i) {
+				if (i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="startClock()" value="Does anyone know what day it is?" /><br />
+		<h3><span id="now">&nbsp;</span></h3>
+		<h3><span id="clock">&nbsp;</span></h3>
+	</body>
+</html>

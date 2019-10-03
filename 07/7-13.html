@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Date对象</title>
+		<script type="text/javascript">
+			function begin(){
+				var now = new Date();
+				var before = new Date();
+				var later= new Date();
+				before.setFullYear(1812,2,3);
+				later.setFullYear(2095,6,15);
+				document.getElementById('now').innerHTML=("Today's date:"+now);
+				document.getElementById('before').innerHTML=("In the pase it was:"+before);
+				document.getElementById('later').innerHTML=("One day ite will be:"+later);
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="begin()"  value="Does anyone know what day it is?"/><br />
+		<h3><span id="now">&nbsp;</span></h3>
+		<h3><span id="before">&nbsp;</span></h3>
+		<h3><span id="later">&nbsp;</span></h3>
+	</body>
+</html>
