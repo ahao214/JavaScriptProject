@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>按值传递字符串变量</title>
+		<script type="text/javascript">
+			function getInfo() {
+				var name = prompt("What's your name?");
+				var email = prompt("What is your email address?");
+				email = checkEmail(email);
+				document.getElementById('first').innerHTML = name;
+				document.getElementById('second').innerHTML = email;
+			}
+
+			function checkEmail(address) {
+				var flag = true;
+				var atSign = "@";
+				var address;
+				var okSign = true;
+				while (flag) {
+					var numChars = address.length;
+					for (j = 1; j < (numChars - 5); j++) {
+						if (address.charAt(j) == atSign) {
+							okSign = false;
+						}
+					}
+
+					if ((address.charAt(numChars - 4) != ".") || (okSign == true)) {
+						alert("Not a valid email address");
+						address = prompt("Enter a valid email address or enter "
+							quit " to exit the program");
+						if (address == "quit") {
+							address = "unavailable";
+							flag = false;
+						}
+					} else {
+						flag = false;
+					}
+					return address;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button"  onclick="getInfo()" value="Enter your information" /><br />
+		<h3>Your name is:<span id="first">&nbsp;</span></h3>
+		<h3>Your email address is:<span id="second">&nbsp;</span></h3>
+	</body>
+
+</html>

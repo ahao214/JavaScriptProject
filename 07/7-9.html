@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>按值传递</title>
+		<script type="text/javascript">
+			function getValue(){
+				var numMice =12;
+				document.getElementById('first').innerHTML= (numMice);
+				changeValue(numMice);
+				document.getElementById('third').innerHTML=(numMice);
+			}
+			
+			function changeValue(x){
+				x =5;
+				document.getElementById('second').innerHTML= (x);
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<input type="button" onclick="getValue()" value="Can you change the number?Try it" /><br />
+		<h3>The value of numMice is:<span id="first">&nbsp;</span></h3>
+		<h3>The value of x,in the changeValue() function is:<span id="second">&nbsp;</span></h3>
+		<h3>The value of numMice after calling the changeValue() function is:<span id="third">&nbsp;</span></h3>
+		
+	</body>
+</html>

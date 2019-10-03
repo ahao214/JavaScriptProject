@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function getDiscount(){
+				var item ="";
+				var rate=0;
+				var salePrice =0;
+				var cost =0;
+				item = prompt("What is the item you want to buy?");
+				cost = parseFloat(prompt("How much does this itme cost?"));
+				checkNum(cost);
+				if(cost<50){
+					rate = .10;
+					salePrice = cost*(1-rate);
+				}else{						
+					if(cost<100){
+						rate =.15;
+						salePrice= cost*(1-rate);
+					}else{
+						rate=.20;
+						salePrice=cost*(1-rate);
+					}
+				}
+				document.getElementById('item').innerHTML= item;
+				document.getElementById('orig_price').innerHTML=("$"+cost.toFixed(2));
+				document.getElementById('discount').innerHTML=((rate*100)+"%");
+				document.getElementById('result').innerHTML=("$"+salePrice.toFixed(2));
+			}
+			
+			function checkNum(num){
+				if(num<0){
+					alert("Invalid entry");
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="getDiscount()" value="How much will you save?Find out now" /><br />
+		<h3>You plan to pruchase:<span id="item">&nbsp;</span></h3>
+		<h3>The original cost is:<span id="orig_price">&nbsp;</span></h3>
+		<h3>The discount rate is:<span id="discount">&nbsp;</span></h3>
+		<h3>You pay:<span id="result">&nbsp;</span></h3>
+	</body>
+</html>
