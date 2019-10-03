@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建函数库</title>
+		<script type="text/javascript">
+			//检查数字是否在给定范围内的函数
+			function checkRange(x, low, high) {
+				var x;
+				var low;
+				var high;
+				var result = true;
+				if (x < low || x > high) {
+					result = false;
+				}
+				return result;
+			}
+			
+			//检查一个字符是否在一个字符串特定位置的函数
+			function charAtPlace(x,y,x){
+				var x;
+				var y;
+				var z;
+				var result = false;
+				if(x.charAt(y-1)==z){
+					result=true;
+				}
+				return result;
+			}
+			
+			//检查一个字符是否在一个特定单词中的函数
+			function checkForChar(x,y){
+				var x;
+				var y;
+				var i;
+				var lgth;
+				var result = false;
+				lgth=x.length;
+				for(i=0;i<lgth;i++){
+					if(x.charAt(i)==y){
+						result =true;
+					}				
+				}
+				return result;
+			}
+			
+			//获取一个数字百分比的函数
+			function checkPercent(x,y,x){
+				var x;
+				var y;
+				var z;
+				var percent;
+				percent = (y/100)*x;
+				if(z==y){
+					return (x-percent);
+				}else{
+					return percent;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
