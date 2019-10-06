@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>显示数组</title>
+		<script type="text/javascript">
+			var names = new Array();
+			var numStud = prompt("How many students are in the class?");
+			numStud = parseInt(numStud);
+			var i = 0;
+			for (i = 0; i <= numStud - 1; i++) {
+				names[i] = prompt("Enter the student's name:");
+				document.write("Name of student " + (i + 1) + ":" + names[i] + "<br/>");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
