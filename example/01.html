@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <script type="text/javascript">
+        function add() {
+            var num1,num2;
+            num1 = parseFloat(document.myform.txtNum1.value)
+            num2 = parseFloat(document.myform.txtNum2.value)
+            document.myform.txtResult.value = num1 +num2;
+        }
+        function  sub() {
+            var num1,num2;
+            num1 = parseFloat(document.myform.txtNum1.value)
+            num2 = parseFloat(document.myform.txtNum2.value)
+            document.myform.txtResult.value = num1 - num2;
+        }
+        function mul() {
+            var num1,num2;
+            num1 = parseFloat(document.myform.txtNum1.value)
+            num2 = parseFloat(document.myform.txtNum2.value)
+            document.myform.txtResult.value = num1 * num2;
+        }
+        function div() {
+            var num1,num2;
+            num1 = parseFloat(document.myform.txtNum1.value)
+            num2 = parseFloat(document.myform.txtNum2.value)
+            document.myform.txtResult.value = num1 / num2;
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post" name="myform" id="myform">
+    <TABLE border="0" bgcolor="#C9E495" align="center">
+        <TR>
+            <TD colspan="4"><H3><img src="../images/shop.gif" width="54" height="54">      购物简易计算器</H3></TD>
+        </TR>
+        <TR  >
+            <TD  >第一个数</TD>
+            <TD colspan="3"><INPUT name="txtNum1" type="text" class="textBaroder" id="txtNum1" size="25"></TD>
+        </TR>
+        <TR  >
+            <TD>第二个数</TD>
+            <TD colspan="3"><INPUT name="txtNum2" type="text" class="textBaroder" id="txtNum2" size="25"></TD>
+        </TR>
+        <TR>
+            <TD><INPUT name="addButton2" type="button" id="addButton2" value="  ＋  " onClick="add()"></TD>
+            <TD><INPUT name="subButton2" type="button" id="subButton2" value="  －  " onClick="sub()"></TD>
+            <TD><INPUT name="mulButton2" type="button" id="mulButton2" value="  ×  " onClick="mul()"></TD>
+            <TD><INPUT name="divButton2" type="button" id="divButton2" value="  ÷  " onClick="div()"></TD>
+        </TR>
+        <TR>
+            <TD>计算结果</TD>
+            <TD colspan="3"><INPUT name="txtResult" type="text" class="textBaroder" id="txtResult" size="25"></TD>
+        </TR>
+    </TABLE>
+</form>
+</body>
+</html>

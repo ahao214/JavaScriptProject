@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>平行数组</title>
+		<script type="text/javascript">
+			var names = new Array();
+			var grades = new Array();
+			var high =0;
+			var index =0;
+			var k=0;
+			while(names[k]!="*"){
+				names[k]=prompt("Enter teh student's name or enter an asterisk(*) when you are done:");
+				if(names[k]=="*"){
+					break;
+				}
+				grades[k]=prompt("Enter the student's garde:");
+				grades[k]=parseFloat(grades[k]);
+				document.write("Name of student "+(k+1)+":"+names[k]+",grade:"+grades[k]+"<br/>");
+				if(grades[k]>high){
+					index =k;
+					high= grades[index];
+				}
+				k=k+1;							
+			}
+			document.write("The highest grade in the class is:"+ grades[index]+"<br/>");
+			document.write(names[index]+" is the high-achieving student!<br/>");
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

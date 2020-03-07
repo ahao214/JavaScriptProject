@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>使用sort()方法依字母顺序排序</title>
+		<script type="text/javascript">
+			// var name = ["Jone", "Tom", "Jerry", "Kevin", "Sky"];
+			// document.write(name.sort());
+
+
+			var names = new Array();
+			var count = 0;
+			for (count = 0; count < 6; count++) {
+				names[count] = prompt("Enter a name");
+				document.write(names[count] + " ");
+			}
+			names.sort();
+			document.write("<br/>");
+
+			for (count = 0; count < 6; count++) {
+				document.write(names[count] + "  ");
+			}
+		</script>
+
+
+	</head>
+	<body>
+	</body>
+</html>
