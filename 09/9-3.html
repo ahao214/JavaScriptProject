@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>reverse()方法</title>
+		<script type="text/javascript">
+			var players= new Array();
+			var count =0;
+			for(count =0;count<4;count++){
+				players[count]=prompt("Enter the name of a player:");
+				document.write(players[count]+"   ");
+			}
+			
+			//反转给定数组元素
+			players.reverse();
+			
+			document.write("<br/>");
+			for(count=0;count < 4;count++){
+				document.write(players[count]+"  ");
+			}
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
