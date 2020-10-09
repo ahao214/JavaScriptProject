@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var person;
+			document.write(person + "<br/>")
+
+			var car = null;
+			document.write(car + "<br/>")
+
+
+			var msg = "hellow";
+			msg = msg + " world";
+			alert(msg)
+
+			var str = "i love js";
+			alert("i love js!的字符个数是：" + str.length);
+
+			var txt = "Hello World";
+			document.write("正常输出：" + txt + "</p>");
+			document.write("小写方式：" + txt.toLowerCase() + "</p>");
+			document.write("大写方式：" + txt.toUpperCase() + "</p>");
+			document.write("按照本地方式把字符串转换为小写：" + txt.toLocaleLowerCase() + "</p>");
+			document.write("按照本地方式把字符串转换为大写：" + txt.toLocaleUpperCase() + "</p>");
+
+
+			var x1 = 35.00;
+			var x2 = 35;
+			var y = 123e5;
+			var z = 123e-5;
+			document.write(x1 + "<br/>");
+			document.write(x2 + "<br/>");
+			document.write(y + "<br/>");
+			document.write(z + "<br/>");
+
+
+			people = new Object();
+			people.firstName = "Bill";
+			people.lastName = "Gates";
+			people.age = 56;
+			people.eyecolor = "blue";
+			document.write(people.firstName + " is " + people.age + " years old!");
+
+
+			label1: for (var i = 1; i <= 9; i++) {
+				document.write("<br/>");
+				for (var j = 1; i <= 9; j++) {
+					if (j > i) {
+						continue label1;
+					}
+					document.write(i + "*" + j + "=" + i * j + "&nbsp;");
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
