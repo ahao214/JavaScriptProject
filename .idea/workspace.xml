@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9511d9b1-4ec3-4919-8653-5697a6888ef3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/09/9-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/09/9-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05/5-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/05/5-18.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09/9-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="216">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,6 +62,7 @@
         <option value="$PROJECT_DIR$/08/8-1.html" />
         <option value="$PROJECT_DIR$/example/01.html" />
         <option value="$PROJECT_DIR$/example/02.html" />
+        <option value="$PROJECT_DIR$/09/9-1.html" />
       </list>
     </option>
   </component>
@@ -80,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -90,23 +91,12 @@
             <path>
               <item name="JavaScriptProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScriptProject" type="462c0819:PsiDirectoryNode" />
-              <item name="09" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScriptProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScriptProject" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScriptProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScriptProject" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,14 +146,16 @@
       <workItem from="1580810299856" duration="30000" />
       <workItem from="1594386984584" duration="10000" />
       <workItem from="1600868903624" duration="17000" />
+      <workItem from="1610521355371" duration="297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2701000" />
+    <option name="totallyTimeSpent" value="2998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16441621" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -218,8 +210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09/9-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="216">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
