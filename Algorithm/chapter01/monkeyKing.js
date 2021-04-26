@@ -29,4 +29,4 @@ function monkeyKing(m, n) {
 }
 
 var monkey = monkeyKing(5, 2);
-console.log("最后当大王的猴子的编号是：" + monkey)
+console.log("最后当大王的猴子的编号是：" + monkey);
