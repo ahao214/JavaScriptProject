@@ -5,7 +5,7 @@ for (var i = 1; i <= N; i++) {
     num[i] = i;
 }
 
-perm(num, i);
+perm(num, 1);
 
 function perm(num, i) {
     var j, k, tmp;
