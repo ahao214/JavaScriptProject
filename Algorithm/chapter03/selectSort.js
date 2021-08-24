@@ -60,3 +60,23 @@ function seq_sch(arr, k) {
 //顺序查找
 var arrseq = [9, 15, 34, 76, 25, 5, 47, 55];
 console.log(seq_sch(arrseq, 47));
+
+
+//二分查找
+function bin_sch(array, low, high, k) {
+    if (low <= high) {
+        var mid = Math.floor((low + high) / 2);
+        if (array[mid] == k) {
+            return mid;
+        }
+        if (k < array[mid]) {
+            return bin_sch(array, low, mid - 1, k);
+        }
+        return bin_sch(array, mid + 1, high, k);
+    }
+    return -1;
+}
+
+//二分查找
+var arrseq = [5, 9, 15, 34, 76, 25, 5, 47, 55];
+console.log(bin_sch(arrseq, 0, 7, 47));
