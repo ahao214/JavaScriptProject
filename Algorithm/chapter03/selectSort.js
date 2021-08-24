@@ -37,3 +37,26 @@ for (k in arr) {
     txt += arr[k] + " ";
 }
 console.log("排序后：", txt);
+
+/**
+ * 顺序查找
+ * @param arr 数组
+ * @param k  要查找的元素
+ * @return 成功返回数组下标，失败则返回-1
+ */
+
+function seq_sch(arr, k) {
+    for (var i = 0, n = arr.length; i < n; i++) {
+        if (arr[i] == k) {
+            break;
+        }
+    }
+    if (i < n) {
+        return i;
+    }
+    return -1;
+}
+
+//顺序查找
+var arrseq = [9, 15, 34, 76, 25, 5, 47, 55];
+console.log(seq_sch(arrseq, 47));
