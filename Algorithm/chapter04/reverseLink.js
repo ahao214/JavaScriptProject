@@ -87,3 +87,36 @@ console.log("逆序后：");
 lists.getLinkList();
 //释放链表所占的空间
 lists.clear();
+
+
+/**递归法 */
+linkList.prototype = {
+    recursiveReverse: function(firstRef) {
+        if (firstRef = null) {
+            return;
+        }
+        var cur, rest;
+        cur = firstRef;
+        rest = cur.next;
+        if (rest == null) {
+            //头结点指向逆序后链表的第一个结点
+            this.header.next = firstRef;
+            return;
+        }
+        //逆序rest，逆序后链表
+        this.recursiveReverse(rest);
+        //把第一个结点添加到尾结点
+        cur.next.next = cur;
+        cur.next = null;
+    },
+    reverseTwo: function() { //对带头结点的单链表进行逆序
+        var head = this.header;
+        if (head == null || head.next == null) {
+            return;
+        }
+        //获取链表第一个结点
+        var firstNode = head.next;
+        //对链表进行逆序
+        this.recursiveReverse(firstNode);
+    }
+};
