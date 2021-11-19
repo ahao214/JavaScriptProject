@@ -23,7 +23,7 @@ var findLHS = function(nums) {
     return res;
 };
 
-
+//方法二：哈希表
 var findLHS2 = function(nums) {
     const cnt = new Map();
     let res = 0;
