@@ -34,3 +34,10 @@ var poorPigs = function(buckets, minutesToDie, minutesToTest) {
     }
     return 0;
 };
+
+//数学
+var poorPigs2 = function(buckets, minutesToDie, minutesToTest) {
+    const states = Math.floor(minutesToTest / minutesToDie) + 1;
+    const pigs = Math.ceil(Math.log(buckets) / Math.log(states));
+    return pigs;
+};
