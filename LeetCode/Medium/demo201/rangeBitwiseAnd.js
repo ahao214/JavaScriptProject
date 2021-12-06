@@ -16,3 +16,12 @@ var rangeBitwiseAnd = function(left, right) {
     }
     return m << shift;
 };
+
+//Brian Kernighan 算法
+var rangeBitwiseAnd2 = function(m, n) {
+    while (m < n) {
+        // 抹去最右边的 1
+        n = n & (n - 1);
+    }
+    return n;
+};
