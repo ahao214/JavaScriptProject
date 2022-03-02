@@ -13,3 +13,7 @@ var addDigits = function(num) {
     }
     return num;
 };
+
+var addDigits1 = function(num) {
+    return (num - 1) % 9 + 1;
+};
