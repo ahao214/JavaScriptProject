@@ -5,22 +5,27 @@
 “最近的”定义为两个整数差的绝对值最小。
 */
 var nearestPalindromic = function(n) {
-    const len = n.length,
-        m = BigInt(n)
-    if (m < 10 n || m === BigInt(10 ** (len - 1))) return m - 1 n + '' // 10 < 或 10,100...10000
-    if (m + 1 n === BigInt(10 ** len)) return m + 2 n + '' // 9,99...9999
-    if (m - 1 n === BigInt(10 ** (len - 1))) return m - 2 n + '' // 11,101...10001
-    const pre = n.slice(0, len + 1 >>> 1) // 取一半，长度为奇数，多取 1 位
-    let minDiff = Number.MAX_SAFE_INTEGER,
-        ans = ''
-    for (let i = -1; i <= 1; i++) { // 依次枚举 -1 +0 +1 三种情况，最小的最接近原数的结果先被找到
-        const newPre = (pre | 0) + i + '' // ↓ 长度为奇数，翻转少翻 1 位
-        const newStr = newPre + (len & 1 ? newPre.slice(0, -1) : newPre).split('').reverse().join('')
-        const diff = Math.abs(n - newStr) // 最接近：与原数的差绝对值最小
-        if (diff && diff < minDiff) { // 差不能为 0 ，即找不能与原数一样，差绝对值最小的
-            minDiff = diff
-            ans = newStr
-        }
+    const bit = BigInt(n);
+    const nums = [bit - 1 n, bit + 1 n];
+    while (true) {
+        const d1 = getDistance(nums[0]);
+        if (d1 === 0) break;
+        nums[0] -= BigInt(d1);
     }
-    return ans
+    while (true) {
+        const d2 = getDistance(nums[1]);
+        if (d2 === 0) break;
+        nums[1] += BigInt(d2);
+    }
+    return bit - nums[0] <= nums[1] - bit ? String(nums[0]) : String(nums[1])
+};
+
+function getDistance(n) {
+    const s = n + '';
+    let i = 0;
+    let j = s.length - 1;
+    while (i < j) {
+        if (s[i++] !== s[j--]) return 10 ** (i - 1);
+    }
+    return 0;
 }
